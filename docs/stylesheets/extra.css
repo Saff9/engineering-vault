@@ -1,0 +1,104 @@
+/* Obsidian-Style Callouts & Enhanced Typography */
+
+:root {
+  --callout-border-radius: 8px;
+  --callout-blend-mode: var(--md-blend-mode);
+}
+
+/* Enhanced Admonition / Callout Styling */
+.admonition {
+  border-radius: var(--callout-border-radius) !important;
+  border-left-width: 4px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  margin: 1.2em 0 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.admonition:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+}
+
+.admonition .admonition-title {
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.02em;
+  padding-top: 0.6em !important;
+  padding-bottom: 0.6em !important;
+}
+
+/* Success Callout */
+.admonition.success {
+  border-left-color: #10b981 !important;
+}
+.admonition.success .admonition-title {
+  color: #059669 !important;
+}
+[data-md-color-scheme="slate"] .admonition.success .admonition-title {
+  color: #34d399 !important;
+}
+
+/* Info Callout */
+.admonition.info {
+  border-left-color: #0284c7 !important;
+}
+.admonition.info .admonition-title {
+  color: #0369a1 !important;
+}
+[data-md-color-scheme="slate"] .admonition.info .admonition-title {
+  color: #38bdf8 !important;
+}
+
+/* Tip Callout */
+.admonition.tip {
+  border-left-color: #8b5cf6 !important;
+}
+.admonition.tip .admonition-title {
+  color: #7c3aed !important;
+}
+[data-md-color-scheme="slate"] .admonition.tip .admonition-title {
+  color: #a78bfa !important;
+}
+
+/* Warning Callout */
+.admonition.warning {
+  border-left-color: #f59e0b !important;
+}
+.admonition.warning .admonition-title {
+  color: #d97706 !important;
+}
+[data-md-color-scheme="slate"] .admonition.warning .admonition-title {
+  color: #fbbf24 !important;
+}
+
+/* Danger / Failure Callout */
+.admonition.danger,
+.admonition.failure {
+  border-left-color: #ef4444 !important;
+}
+.admonition.danger .admonition-title,
+.admonition.failure .admonition-title {
+  color: #dc2626 !important;
+}
+[data-md-color-scheme="slate"] .admonition.danger .admonition-title,
+[data-md-color-scheme="slate"] .admonition.failure .admonition-title {
+  color: #f87171 !important;
+}
+
+/* Code block typography & styling */
+.md-typeset pre > code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace !important;
+  font-size: 0.85rem !important;
+  border-radius: 6px !important;
+}
+
+/* Table styling like Obsidian */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-bg-color--darkest);
+  font-weight: 600;
+}
